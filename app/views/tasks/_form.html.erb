@@ -22,6 +22,8 @@
     <%= f.label :done %>
     <%= f.check_box :done, {}, checked_value = "true",unchecked_value = "false" %>
 
+    <%= f.datetime_select(:created_time, default: Time.now) %>
+
     <%= f.submit %>
   <% end %>
 <% end %>
