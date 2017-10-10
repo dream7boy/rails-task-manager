@@ -1,0 +1,9 @@
+<h1><%= @task.name %></h1>
+<p>priority: <%= @task.priority %></p>
+<p>done?: <%= @task.done == true ? "Done" : "Yet" %></p>
+<p><%= link_to "Back to the lists", tasks_path %></p>
+<p>
+  <%= link_to "Edit the task", edit_task_path(@task) %>
+  <%= link_to "Remove the task", task_path, method: :delete, data: { confirm: "Are you sure?" }  %>
+</p>
+

@@ -1,0 +1,27 @@
+<%= form_for(@task) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :priority %>
+  <%= f.text_field :priority %>
+
+  <%= f.label :done %>
+  <%= f.check_box :done, {}, checked_value = "true",unchecked_value = "false" %>
+
+  <%= f.submit %>
+<% end %>
+
+<% if false %> <!-- make a comment on html.erb -->
+  <%= form_for @task, url: p_lists_path do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :priority %>
+    <%= f.text_field :priority %>
+
+    <%= f.label :done %>
+    <%= f.check_box :done, {}, checked_value = "true",unchecked_value = "false" %>
+
+    <%= f.submit %>
+  <% end %>
+<% end %>
